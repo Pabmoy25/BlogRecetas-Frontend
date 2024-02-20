@@ -1,4 +1,7 @@
+
+
 const Inicio = () => {
+    
     return (
         <div>
             <p>Hola</p>
