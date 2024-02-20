@@ -1,1 +1,13 @@
-
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  body {
+    background-image: radial-gradient(circle 939px at 94.7% 50%, rgb(185, 240, 241) 0%, rgb(200, 222, 248) 76.9%);
+  }
+  
+  .mainpage{
+    flex-grow: 1;
+  }
