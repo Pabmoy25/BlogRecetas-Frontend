@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { borrarRecetaAPI } from "../../../helpers/queries";
+import { Link } from "react-router-dom";
 
 
 const Receta = ({receta, eliminarReceta}) => {
@@ -52,9 +53,9 @@ if (respuesta.status === 200) {
       </td>
       <td>{receta.categoria}</td>
       <td className="text-center">
-        <Button variant="warning" className="me-lg-2">
+        <Link variant="warning" className="me-lg-2 btn btn-warning" to={`/administrador/editar/${receta.id}`}>
           <i className="bi bi-pencil-square"></i>
-        </Button>
+        </Link>
         <Button variant="danger" onClick={borrarReceta} className="me-lg-2 mt-2">
           <i className="bi bi-trash"></i>
         </Button>

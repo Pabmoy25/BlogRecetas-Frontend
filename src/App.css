@@ -35,3 +35,10 @@ body {
   font-family: "Pacifico", cursive;
   color: #fea116;
 }
+
+.textarea-mediano {
+  height: 100px;
+}
+.textarea-grande {
+  height: 200px;
+}

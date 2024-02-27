@@ -1,21 +1,76 @@
 import { Form, Button } from "react-bootstrap";
-import { crearRecetaAPI } from "../../../helpers/queries";
+import { crearRecetaAPI, editarRecetasAPI, obtenerRecetasAPI } from "../../../helpers/queries";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 
-const FormularioRecetas = () => {
+const FormularioRecetas = ({editar,titulo}) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
+    setValue,
   } = useForm();
+  const { id } = useParams();
 
+  const navegacion = useNavigate();
 
-  const recetaValidada = async(receta) => {
+  useEffect(() => {
     
-    const respuesta = await crearRecetaAPI(receta);
+    if (editar) {
+      cargarDatosFormulario();
+    }
+  }, []);
+
+  const cargarDatosFormulario = async () => {
+    const respuesta = await obtenerRecetasAPI(id);
+    console.log(respuesta);
+    if (respuesta.status === 200) {
+      const recetaBuscada = await respuesta.json();
+      
+      setValue("nombreReceta", recetaBuscada.nombreReceta);
+      setValue("descripcion", recetaBuscada.descripcion);
+      setValue("categoria", recetaBuscada.categoria);
+      setValue("ingredientes", recetaBuscada.ingredientes);
+      setValue("preparacion", recetaBuscada.preparacion);
+      setValue("imagen", recetaBuscada.imagen);
+    } else {
+      Swal.fire({
+        title: "Ocurrio un error",
+        text: "Intente editar en unos minutos",
+        icon: "error",
+      });
+    }
+  };
+
+  
+  const recetaValidada = async(receta) => {
+    try {
+      if (editar) {
+        
+        const respuesta = await editarRecetasAPI(id, receta);
+        if (respuesta.status === 200) {
+          Swal.fire({
+            title: "Receta editada",
+            text: `La Receta: ${receta.nombreReceta} fue editada con exito`,
+            icon: "success",
+          });
+          //Redireccionar
+          navegacion("/administrador");
+        } else {
+          Swal.fire({
+            title: "Ocurrio un error",
+            text: "Intente modificar la receta en unos minutos",
+            icon: "error",
+          });
+        }
+      } else {
+        console.log(receta);
+        
+        const respuesta = await crearRecetaAPI(receta);
     if(respuesta.status === 201){
       Swal.fire({
         title: "Receta creada",
@@ -29,11 +84,26 @@ const FormularioRecetas = () => {
         text: "Intente crear la receta en unos minutos",
         icon: "error",
       });
+        }
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
+   
+  
+
+
+
+
+
+
+
+
+
     return (
         <section className="container mainpage">
-          <h1 className="display-4 mt-5 titulo-administrador">Nueva Receta</h1>
+          <h1 className="display-4 mt-5 titulo-administrador">{titulo}</h1>
           <hr />
           
           <Form className="my-4" onSubmit={handleSubmit(recetaValidada)}>
@@ -119,6 +189,7 @@ const FormularioRecetas = () => {
               <Form.Label>Ingredientes*</Form.Label>
               <Form.Control
                 type="text"
+                className="textarea-mediano"
                 placeholder="Ej: 100 g de arroz doble carolina, 1 litro de leche, 150 g de azúcar, 200 cc de crema de leche, 1 rama de canela, 2 tiritas de piel de limón, Canela en polvo, a gusto."
                 as="textarea"
                 {
@@ -143,6 +214,7 @@ const FormularioRecetas = () => {
               <Form.Label>Preparación*</Form.Label>
               <Form.Control
                 type="text"
+                className="textarea-grande"
                 placeholder="Ej: Paso 1: En una cacerola llevar la leche, la rama de canela y las tiritas de piel de limón. Calentar hasta hervir..."
                 as="textarea"
                 {
