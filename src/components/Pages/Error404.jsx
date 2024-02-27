@@ -10,7 +10,7 @@ const Error404 = () => {
           <NavLink end className="nav-link" to="/">
             <div className="text-center d-flex align-items-center justify-content-center flex-column">
               <Image src={logoError} className="img-fluid me-4 w-50" />
-              <Button variant="success" className="my-2 py-2">
+              <Button variant="warning" className="my-2 py-2">
                 Ir al Inicio
               </Button>
             </div>
