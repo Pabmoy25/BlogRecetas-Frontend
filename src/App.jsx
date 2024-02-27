@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Inicio from "./components/Pages/Inicio";
 import Error404 from "./components/Pages/Error404";
 import Administrador from "./components/Pages/Administrador";
+import FormularioRecetas from "./components/Pages/recetas/FormularioRecetas";
 
 function App() {
   return (
@@ -30,6 +31,13 @@ function App() {
               <Route exact path="/error" element={<Error404></Error404>}></Route>
               <Route path="*" element={<Error404></Error404>}></Route>
             </Route>
+            <Route
+              exact
+              path="/administrador/crear"
+              element={
+                <FormularioRecetas></FormularioRecetas>
+              }
+            ></Route>
           </Routes>
         </section>
 
