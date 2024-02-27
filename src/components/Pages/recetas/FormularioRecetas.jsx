@@ -91,17 +91,7 @@ const FormularioRecetas = ({editar,titulo}) => {
     }
   };
    
-  
-
-
-
-
-
-
-
-
-
-    return (
+   return (
         <section className="container mainpage">
           <h1 className="display-4 mt-5 titulo-administrador">{titulo}</h1>
           <hr />

@@ -6,7 +6,7 @@ const CardRecetas = ({cardRecetas}) => {
         <Col md={4} lg={3} className="mb-3">
           <Card className="h-100">
             <div>
-              <img src={cardRecetas.imagen} alt="Arroz con Leche" className="card-img-top-nueva" />
+              <img src={cardRecetas.imagen} alt={cardRecetas.nombreReceta} className="card-img-top-nueva" />
             </div>
             <Card.Body>
             <Card.Title className="primary-font">{cardRecetas.nombreReceta}</Card.Title>
