@@ -18,7 +18,16 @@ const FormularioRecetas = () => {
                 prueba de error
               </Form.Text>
             </Form.Group>
-            
+            <Form.Group className="mb-3" controlId="formNombreProdcuto">
+              <Form.Label>Descripción*</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Ej: Arroz con Leche, limón y canela"
+              />
+              <Form.Text className="text-danger">
+                prueba de error
+              </Form.Text>
+            </Form.Group>
             <Form.Group className="mb-3" controlId="formImagen">
               <Form.Label>Imagen URL*</Form.Label>
               <Form.Control
@@ -54,7 +63,7 @@ const FormularioRecetas = () => {
               </Form.Text>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formImagen">
-              <Form.Label>Preparacion*</Form.Label>
+              <Form.Label>Preparación*</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Ej: Paso 1: En una cacerola llevar la leche, la rama de canela y las tiritas de piel de limón. Calentar hasta hervir..."
