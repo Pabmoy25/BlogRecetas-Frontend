@@ -2,7 +2,7 @@ import { Table } from "react-bootstrap";
 import Receta from "./recetas/Receta";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { leerRecetasAPI } from "../../helpers/queries";
+import { borrarRecetaAPI, leerRecetasAPI } from "../../helpers/queries";
 
 
 
@@ -17,6 +17,15 @@ const Administrador = () => {
         try {
          const listaRecetasAPI = await leerRecetasAPI()
          setRecetas (listaRecetasAPI);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      const borrarReceta = async (id) => {
+        try {
+          await borrarRecetaAPI(id);
+          setRecetas(recetas.filter(receta => receta.id !== id));
         } catch (error) {
           console.log(error);
         }
@@ -44,7 +53,7 @@ const Administrador = () => {
             </thead>
             <tbody>
             {
-            recetas.map((receta)=><Receta key={receta.id} receta={receta}></Receta>)
+            recetas.map((receta)=><Receta key={receta.id} receta={receta} eliminarReceta={borrarReceta}></Receta>)
           }
           
             </tbody>

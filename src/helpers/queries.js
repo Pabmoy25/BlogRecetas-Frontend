@@ -35,3 +35,15 @@ export const leerRecetasAPI = async () => {
       console.log(error);
     }
   };
+
+  export const borrarRecetaAPI = async (id) => {
+    try {
+      const respuesta = await fetch(`${URI_RECETAS}/${id}`, {
+        method: "DELETE",
+      });
+      console.log(respuesta);
+      return respuesta;
+    } catch (error) {
+      console.log(error);
+    }
+  };
