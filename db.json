@@ -2,12 +2,21 @@
   "recetas": [
     {
       "nombreReceta": "Arroz con Leche",
-      "Descripcion": "Arroz con Leche, limón y canela",
+      "descripcion": "Arroz con Leche, limón y canela",
       "imagen": "https://mahatmarice.com/wp-content/uploads/2019/08/Arroz-Con-Leche-029-980x551.jpg.webp",
       "categoria": "Postres y Dulces",
       "ingredientes": "100 g de arroz doble carolina, 1 litro de leche, 150 g de azúcar, 200 cc de crema de leche, 1 rama de canela, 2 tiritas de piel de limón, Canela en polvo, a gusto.",
       "preparacion": "Paso 1: En una cacerola llevar la leche, la rama de canela y las tiritas de piel de limón. Calentar hasta hervir...",
       "id": "1"
-    }
+    },
+    {
+        "nombreReceta": "Milanesa",
+        "descripcion": "Milanesa de carne roja",
+        "imagen": "https://img-global.cpcdn.com/recipes/e3a271511d89f044/400x400cq70/photo.jpg",
+        "categoria": "Carnes",
+        "ingredientes": "1 k. Carne para milanesas (puede ser, nalga, lomo), 3 Huevos, 500 gr. Pan rallado, Sal, pimienta, ajos, perejil.",
+        "preparacion": "Paso 1: Mezclar los huevos con la leche, sal, pimienta, ajos y perejil finamente picados, ponemos los cortes de milanesa y dejamos macerar mínimo una hora...",
+        "id": "2"
+      }
   ]
 }

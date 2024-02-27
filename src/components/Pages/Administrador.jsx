@@ -1,9 +1,28 @@
-import { Button, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import Receta from "./recetas/Receta";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { leerRecetasAPI } from "../../helpers/queries";
+
+
 
 
 const Administrador = () => {
+    const [recetas, setRecetas] = useState([]);
+    useEffect(() => {
+      traerRecetas();
+    }, []);
+
+    const traerRecetas = async ()=> {
+        try {
+         const listaRecetasAPI = await leerRecetasAPI()
+         setRecetas (listaRecetasAPI);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+
     return (
         <section className="container mainpage">
           <div className="d-flex justify-content-between align-items-center mt-5">
@@ -24,10 +43,10 @@ const Administrador = () => {
             </tr>
             </thead>
             <tbody>
-              <Receta></Receta>
-              <Receta></Receta>
-              <Receta></Receta>
-              <Receta></Receta>
+            {
+            recetas.map((receta)=><Receta key={receta.id} receta={receta}></Receta>)
+          }
+          
             </tbody>
           </Table>
         </section>
