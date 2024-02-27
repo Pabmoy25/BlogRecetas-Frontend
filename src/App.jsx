@@ -3,17 +3,15 @@ import "./App.css";
 import Menu from "./components/Common/Menu";
 import Footer from "./components/Common/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Container } from "react-bootstrap";
 import Inicio from "./components/Pages/Inicio";
 import Error404 from "./components/Pages/Error404";
 
 function App() {
   return (
     <>
-    
-      <BrowserRouter>
+        <BrowserRouter>
         <Menu></Menu>
-        <Container className="mainpage">
+        <section className="mainpage">
           <Routes>
             <Route>
               <Route exact path="/" element={<Inicio></Inicio>}></Route>
@@ -26,7 +24,7 @@ function App() {
               <Route path="*" element={<Error404></Error404>}></Route>
             </Route>
           </Routes>
-        </Container>
+        </section>
 
         <Footer></Footer>
       </BrowserRouter>
