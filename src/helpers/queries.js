@@ -12,3 +12,12 @@ export const leerRecetasAPI = async () => {
       console.log(error);
     }
   };
+
+  export const obtenerRecetasAPI = async (id) => {
+    try {
+      const respuesta = await fetch(`${URI_RECETAS}/${id}`);
+      return respuesta;
+    } catch (error) {
+      console.log(error);
+    }
+  };
