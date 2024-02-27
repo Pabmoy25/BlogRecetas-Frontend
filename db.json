@@ -10,13 +10,31 @@
       "id": "1"
     },
     {
-        "nombreReceta": "Milanesa",
-        "descripcion": "Milanesa de carne roja",
-        "imagen": "https://img-global.cpcdn.com/recipes/e3a271511d89f044/400x400cq70/photo.jpg",
-        "categoria": "Carnes",
-        "ingredientes": "1 k. Carne para milanesas (puede ser, nalga, lomo), 3 Huevos, 500 gr. Pan rallado, Sal, pimienta, ajos, perejil.",
-        "preparacion": "Paso 1: Mezclar los huevos con la leche, sal, pimienta, ajos y perejil finamente picados, ponemos los cortes de milanesa y dejamos macerar mínimo una hora...",
-        "id": "2"
-      }
+      "nombreReceta": "Milanesa",
+      "descripcion": "Milanesa de carne roja",
+      "imagen": "https://img-global.cpcdn.com/recipes/e3a271511d89f044/400x400cq70/photo.jpg",
+      "categoria": "Carnes",
+      "ingredientes": "1 k. Carne para milanesas (puede ser, nalga, lomo), 3 Huevos, 500 gr. Pan rallado, Sal, pimienta, ajos, perejil.",
+      "preparacion": "Paso 1: Mezclar los huevos con la leche, sal, pimienta, ajos y perejil finamente picados, ponemos los cortes de milanesa y dejamos macerar mínimo una hora...",
+      "id": "2"
+    },
+    {
+      "id": "1b1b",
+      "nombreReceta": "Panqueques",
+      "descripcion": "Panqueques con dulce de leche",
+      "imagen": "https://www.clarin.com/img/2023/04/20/FH-fEx20c_1256x620__2.jpg",
+      "categoria": "Postres y Dulces",
+      "ingredientes": "500 cc de leche, 250 g de harina 0000, 1 pizca de sal, 2 huevos, 16 cucharadas de dulce de leche",
+      "preparacion": "Paso 1: En un bol, colocar los huevos y la leche.\nPaso 2: umar la pizca de sal y la harina de a poco, mientras se bate para que no se formen grumos. También se pueden hacer con licuadora de mano para que no queden grumos.\nPaso 3: Dejar reposar en la heladera media hora para que la harina se hidrate.\nPaso 4: Calentar un sartén (o crepera de 20 cm de diámetro ideal) con materia grasa y echar un cucharón de la preparación. Cuando coagule, voltearlo.\nPaso 5: Servir con abundante dulce de leche."
+    },
+    {
+      "id": "1269",
+      "nombreReceta": "Panchuques",
+      "descripcion": "Panchuques con masa fina",
+      "imagen": "https://www.cronica.com.ar/__export/1664663511329/sites/cronica/img/2022/10/01/panchuque-receta_crop1664663324525.jpg_679578591.jpg",
+      "categoria": "Minutas",
+      "ingredientes": "200 ml Leche, 1 huevo, 2 cdas Mostaza, Sal, 4 cdas Harina, 6 salchichas, 25 g Manteca",
+      "preparacion": "Paso 1: Lo que vamos a preparar primero es la masa líquida. Para ello, mezclamos la leche con el huevo y luego agregamos la harina, la mostaza y la sal. Debe quedar líquida. Podemos mezclar con batidora. Para que quede más esponjosa.\nPaso 2: Se precalienta la máquina 15 minutos. Pintamos por los moldes con manteca. Primero se coloca las salchichas y después se cubre con la mezcla. Es importante hacer presión en la tapa. Esto nos asegura una cocción pareja y que la masa llegue a todos los rincones. Si está bien caliente no debería tardar más de 10 minutos.\nPaso 3: Y ya podemos disfrutar de los ricos panchuques. Se los puede acompañar con salsitas o aderezos. Nosotros hicimos una mayonesa de ajo. Quizásno tengas una panchuquera ni a quien pedirle prestado. No te preocupes. Cuando vengas a Tucumán te esperamos con la panchuquera encendida."
+    }
   ]
 }
