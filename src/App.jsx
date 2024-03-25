@@ -9,6 +9,8 @@ import Error404 from "./components/Pages/Error404";
 import Administrador from "./components/Pages/Administrador";
 import FormularioRecetas from "./components/Pages/recetas/FormularioRecetas";
 import DetalleReceta from "./components/Pages/DetalleReceta";
+import Login from "./components/Pages/Login";
+
 
 function App() {
   return (
@@ -56,6 +58,11 @@ function App() {
                 ></FormularioRecetas>
               }
             ></Route>
+            <Route
+                exact
+                path="/login"
+                element={<Login></Login>}
+              ></Route>
           </Routes>
         </section>
 
