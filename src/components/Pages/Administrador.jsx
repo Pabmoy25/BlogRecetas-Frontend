@@ -25,7 +25,7 @@ const Administrador = () => {
       const borrarReceta = async (id) => {
         try {
           await borrarRecetaAPI(id);
-          setRecetas(recetas.filter(receta => receta.id !== id));
+          setRecetas(recetas.filter(receta => receta._id !== id));
         } catch (error) {
           console.log(error);
         }
@@ -53,7 +53,7 @@ const Administrador = () => {
             </thead>
             <tbody>
             {
-            recetas.map((receta)=><Receta key={receta.id} receta={receta} eliminarReceta={borrarReceta}></Receta>)
+            recetas.map((receta)=><Receta key={receta._id} receta={receta} eliminarReceta={borrarReceta}></Receta>)
           }
           
             </tbody>

@@ -30,7 +30,7 @@ const Inicio = () => {
           <h2 className="text-center mt-5">Nuestras Recetas</h2>
           <hr />
 <Row>
-{recetas.map((receta)=><CardRecetas key={receta.id} cardRecetas={receta}></CardRecetas>)}
+{recetas.map((receta)=><CardRecetas key={receta._id} cardRecetas={receta}></CardRecetas>)}
 </Row>
          
            
