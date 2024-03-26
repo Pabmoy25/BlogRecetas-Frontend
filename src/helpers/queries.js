@@ -15,6 +15,20 @@ export const leerUsuarioAPI = async () => {
   }
 };
 
+export const crearUsuarioAPI = async (usuarioNuevo) => {
+  try {
+    const respuesta = await fetch(URI_RECETAS, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(usuarioNuevo),
+    });
+    console.log(respuesta);
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const leerRecetasAPI = async () => {
     try {
       const respuesta = await fetch(URI_RECETAS);
@@ -24,6 +38,8 @@ export const leerRecetasAPI = async () => {
       console.log(error);
     }
   };
+
+  
 
   
 

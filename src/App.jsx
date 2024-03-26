@@ -15,6 +15,9 @@ import { Navbar } from "react-bootstrap";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdmin from "./components/routes/RutasAdmin";
 import UsuariosAdmin from "./components/Pages/UsuariosAdmin";
+import FormUsuarios from "./components/Pages/usuarios/FormUsuarios";
+
+
 
 
 function App() {
@@ -49,19 +52,14 @@ function App() {
               element={<RutasProtegidas><RutasAdmin></RutasAdmin></RutasProtegidas>}
             ></Route>
               <Route exact path="/error" element={<Error404></Error404>}></Route>
-              
+              <Route
+              exact
+              path="/usuariosAdmin/*"
+              element={<RutasProtegidas><RutasAdmin></RutasAdmin></RutasProtegidas>}
+            ></Route>
               <Route path="*" element={<Error404></Error404>}></Route>
             </Route>
-            <Route
-              exact
-              path="/administrador/crear"
-              element={
-                <FormularioRecetas
-                editar={false}
-                  titulo="Nueva Receta"></FormularioRecetas>
-              }
-            ></Route>
-            <Route
+              <Route
               exact
               path="/detalleReceta/:id"
               element={<DetalleReceta></DetalleReceta>}
@@ -82,10 +80,15 @@ function App() {
               element={
                 <UsuariosAdmin
                   editar={true}
-                  titulo="Editar Receta"
+                  titulo="Editar Usuario"
                 ></UsuariosAdmin>
               }
             ></Route>
+            <Route
+                exact
+                path="/adminUsuario/crear"
+                element={<FormUsuarios></FormUsuarios>}
+              ></Route>
 
           </Routes>
         </section>

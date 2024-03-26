@@ -47,8 +47,8 @@ const Login = ({setUsuarioLogueado}) => {
               required: "El email es obligatorio",
               minLength: { value: 7, message: "el minimo es de 7 caracteres" },
               maxLength: {
-                value: 50,
-                message: "el maximo es de 50 caracteres",
+                value: 30,
+                message: "el maximo es de 30 caracteres",
               },
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -71,7 +71,7 @@ const Login = ({setUsuarioLogueado}) => {
               minLength: { value: 8, message: "el minimo es de 8 caracteres" },
               maxLength: {
                 value: 12,
-                message: "el maximo es de 15 caracteres",
+                message: "el maximo es de 12 caracteres",
               },
               pattern: {
                 value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
