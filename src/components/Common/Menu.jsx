@@ -1,8 +1,15 @@
 import { Nav, Container, Navbar } from "react-bootstrap";
 import logo from "../../assets/logoRecetas.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
-const Menu = () => {
+
+const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
+  const navegacion = useNavigate();
+  const logout = () => {
+    sessionStorage.removeItem("inicioRollingCooking");
+    setUsuarioLogueado("");
+    navegacion("/");
+  };
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
@@ -20,16 +27,25 @@ const Menu = () => {
             <NavLink end className="nav-link" to="/">
               Inicio
             </NavLink>
+            {usuarioLogueado.length > 0 ? (
+            <>
             <NavLink end className="nav-link" to="/administrador">
               Administrador
             </NavLink>
+            <Link className="nav-link" variant="link" onClick={logout}>
+                    LogOut
+                  </Link>
+            </>
+            ):(
             <NavLink end className="nav-link" to="/login">
               Login
             </NavLink>
+            )}
             <NavLink end className="nav-link" to="/registro">
               Registro
             </NavLink>
             </Nav>
+            
           </Navbar.Collapse>
         </Container>
       </Navbar>
