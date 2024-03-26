@@ -36,5 +36,13 @@
       "ingredientes": "200 ml Leche, 1 huevo, 2 cdas Mostaza, Sal, 4 cdas Harina, 6 salchichas, 25 g Manteca",
       "preparacion": "Paso 1: Lo que vamos a preparar primero es la masa líquida. Para ello, mezclamos la leche con el huevo y luego agregamos la harina, la mostaza y la sal. Debe quedar líquida. Podemos mezclar con batidora. Para que quede más esponjosa.\nPaso 2: Se precalienta la máquina 15 minutos. Pintamos por los moldes con manteca. Primero se coloca las salchichas y después se cubre con la mezcla. Es importante hacer presión en la tapa. Esto nos asegura una cocción pareja y que la masa llegue a todos los rincones. Si está bien caliente no debería tardar más de 10 minutos.\nPaso 3: Y ya podemos disfrutar de los ricos panchuques. Se los puede acompañar con salsitas o aderezos. Nosotros hicimos una mayonesa de ajo. Quizásno tengas una panchuquera ni a quien pedirle prestado. No te preocupes. Cuando vengas a Tucumán te esperamos con la panchuquera encendida."
     }
+  ],
+  
+  "usuarios": [
+    {
+      "email": "prueba@mail.com",
+      "password": "123",
+      "id": "b183"
+    }
   ]
 }

@@ -15,7 +15,10 @@ const Inicio = () => {
     const traerRecetas = async ()=> {
         try {
          const listaRecetasAPI = await leerRecetasAPI()
-         setRecetas (listaRecetasAPI);
+         if(!traerRecetas){
+          return setRecetas ([]);
+         }
+         setRecetas (listaRecetasAPI)
         } catch (error) {
           console.log(error);
         }

@@ -1,7 +1,19 @@
 const URI_RECETAS = import.meta.env.VITE_API_RECETAS;
-
 console.log(URI_RECETAS);
 
+const URI_USUARIOS = import.meta.env.VITE_API_USUARIOS;
+console.log(URI_USUARIOS);
+
+
+export const leerUsuarioAPI = async () => {
+  try {
+    const respuesta = await fetch(URI_USUARIOS);
+    const listaUsuarios = await respuesta.json();
+    return listaUsuarios;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const leerRecetasAPI = async () => {
     try {
@@ -12,6 +24,8 @@ export const leerRecetasAPI = async () => {
       console.log(error);
     }
   };
+
+  
 
   export const obtenerRecetasAPI = async (id) => {
     try {

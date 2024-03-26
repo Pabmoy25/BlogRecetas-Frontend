@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Navbar } from "react-bootstrap";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdmin from "./components/routes/RutasAdmin";
+import UsuariosAdmin from "./components/Pages/UsuariosAdmin";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
               element={<RutasProtegidas><RutasAdmin></RutasAdmin></RutasProtegidas>}
             ></Route>
               <Route exact path="/error" element={<Error404></Error404>}></Route>
+              
               <Route path="*" element={<Error404></Error404>}></Route>
             </Route>
             <Route
@@ -56,7 +58,7 @@ function App() {
               element={
                 <FormularioRecetas
                 editar={false}
-                  titulo="Nuevo producto"></FormularioRecetas>
+                  titulo="Nueva Receta"></FormularioRecetas>
               }
             ></Route>
             <Route
@@ -74,6 +76,17 @@ function App() {
                 ></FormularioRecetas>
               }
             ></Route>
+            <Route
+              exact
+              path="/adminUsuario"
+              element={
+                <UsuariosAdmin
+                  editar={true}
+                  titulo="Editar Receta"
+                ></UsuariosAdmin>
+              }
+            ></Route>
+
           </Routes>
         </section>
 
